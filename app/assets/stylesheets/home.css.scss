@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
-	height: 200%;
+	height: 200%!important;
 }
 
 body {
@@ -21,10 +21,16 @@ h1.logo {
 	font-size: 60px;
 	margin: 0 0 0 50px;
 	color: white;
+	float: left;
 }
 
 h1.logo span {
 	font-weight: 600;
+}
+
+header h2 {
+	float: right;
+	color: white!important;
 }
 
 .header {
@@ -55,6 +61,9 @@ h1.logo span {
  	-o-background-size: cover;
 	background-size: cover;
 	color: white;
+	-moz-box-shadow: 0 0 10px black;
+	-webkit-box-shadow: 0 0 10px black;
+	box-shadow: 0 0 10px black;
 }
 
 #welcome {
@@ -64,8 +73,73 @@ h1.logo span {
 	z-index: 1;
 	top: 25%;
 	height: 25%;
+	float: left;
 }
 
 #welcome i {
 	color: #00CCFF;
+}
+
+.mini-nav {
+	position: relative;
+	z-index: 1;
+	top: 25%;
+	margin: 0 150px 0 0;
+	height: 300px;
+	width: 300px;
+	line-height: 300px;
+	text-align: center;
+	float: right;
+	font-weight: 800;
+	font-size: 30px;
+	color: black!important;
+	background: white;
+	border-radius: 300px;
+	transform: rotate(20deg);
+	-ms-transform: rotate(20deg); /* IE 9 */
+	-webkit-transform: rotate(20deg); /* Safari and Chrome */
+	-webkit-transition: top 2s;
+  -moz-transition: top 2s;
+  -o-transition: top 2s;
+  transition: top 2s;
+}
+
+.mini-nav a:link {
+	text-decoration: none;
+	color: black;
+}
+
+.mini-nav a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+.mini-nav a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.mini-nav a:active {
+	text-decoration: none;
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+a:active {
+	text-decoration: none;
+	color: white;
 }

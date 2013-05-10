@@ -1,0 +1,43 @@
+
+.bg-container {
+	height: 100%!important;
+	background: url(image_path('imagine.jpg')) no-repeat top center;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+ 	-o-background-size: cover;
+	background-size: cover;
+}
+
+html {
+	height: 100%!important;
+}
+
+.user-form {
+	margin: 200px auto 0 auto;
+	width: 400px;
+	background-color: white;
+}
+
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white!important;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+a:active {
+	text-decoration: none;
+	color: white;
+}
+
+.new_user {
+	margin: 0 auto 0 auto;
+}
