@@ -2,6 +2,7 @@
 .bg-container {
 	height: 100%!important;
 	background: url(image_path('imagine.jpg')) no-repeat top center;
+	margin: 0;
 	-webkit-background-size: cover;
  	-moz-background-size: cover;
  	-o-background-size: cover;
@@ -13,7 +14,7 @@ html {
 }
 
 .user-form {
-	margin: 200px auto 0 auto;
+	margin: 0 auto 0 auto;
 	width: 400px;
 	background-color: white;
 }
@@ -25,7 +26,7 @@ a:link {
 
 a:visited {
 	text-decoration: none;
-	color: white!important;
+	color: white;
 }
 
 a:hover {
@@ -40,4 +41,41 @@ a:active {
 
 .new_user {
 	margin: 0 auto 0 auto;
+}
+
+.button {
+	width: 100px;
+	border-radius: 100px;
+	padding: 10px;
+	background: #00ccff;
+	border: none;
+}
+
+input {
+	outline: none;
+	border-radius: 10px;
+	padding: 5px;
+	border: 1px solid black;
+	font-family: 'Open Sans', arial, sans-serif;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 200px;
+}
+
+input:focus {
+	box-shadow: 0px 0px 3px #51a7e8;
+	-moz-box-shadow: 0px 0px 3px #51a7e8;
+	-webkit-box-shadow: 0px 0px 3px #51a7e8;
+	border: 1px solid #51a7e8;
+}
+
+.align-c {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+div label {
+	text-align: center;
 }

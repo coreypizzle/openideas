@@ -6,19 +6,19 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => 'user-form-inner') do |f| %>
   <%= devise_error_messages! %>
 
-   <div><%= f.label :username %><br />
-  <%= f.email_field :username, :autofocus => true %></div>
+   <div class="align-c"><%= f.label :username, :class => "align-c" %><br />
+  <%= f.email_field :username, :autofocus => true, :class => "align-c" %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <div class="align-c"><%= f.label :email, :class => "align-c" %><br />
+  <%= f.email_field :email, :autofocus => true, :class => "align-c" %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div class="align-c"><%= f.label :password, :class => "align-c" %><br />
+  <%= f.password_field :password, :class => "align-c" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <div class="align-c"><%= f.label :password_confirmation, :class => "align-c" %><br />
+  <%= f.password_field :password_confirmation, :class => "align-c" %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div class="align-c"><%= f.submit "Sign up", :class => "button align-c" %></div>
  </div>
  </div>
 <% end %>

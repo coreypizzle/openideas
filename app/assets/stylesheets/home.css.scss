@@ -28,9 +28,19 @@ h1.logo span {
 	font-weight: 600;
 }
 
-header h2 {
+.header ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
 	float: right;
 	color: white!important;
+	margin: 0 10px 0 0;
+	font-weight: 800;
+
+}
+
+.header ul li {
+	display:inline;
 }
 
 .header {
@@ -44,6 +54,7 @@ header h2 {
 	position: fixed;
 	z-index: 2;
 	top:0px;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -99,9 +110,9 @@ header h2 {
 	-ms-transform: rotate(20deg); /* IE 9 */
 	-webkit-transform: rotate(20deg); /* Safari and Chrome */
 	-webkit-transition: top 2s;
-  -moz-transition: top 2s;
-  -o-transition: top 2s;
-  transition: top 2s;
+  	-moz-transition: top 2s;
+  	-o-transition: top 2s;
+  	transition: top 2s;
 }
 
 .mini-nav a:link {

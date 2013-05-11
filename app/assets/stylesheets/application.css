@@ -143,7 +143,7 @@ a:link {
 
 a:visited {
 	text-decoration: none;
-	color: white!important;
+	color: white;
 }
 
 a:hover {
@@ -154,6 +154,16 @@ a:hover {
 a:active {
 	text-decoration: none;
 	color: white;
+}
+
+header ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+header ul li {
+	display:inline;
 }
 
 
