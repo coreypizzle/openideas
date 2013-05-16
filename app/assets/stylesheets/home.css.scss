@@ -18,7 +18,7 @@ body {
 
 h1.logo {
 	font-weight: 300;
-	font-size: 60px;
+	font-size: 55px;
 	margin: 0 0 0 50px;
 	color: white;
 	float: left;
@@ -40,13 +40,31 @@ h1.logo span {
 }
 
 .header ul li {
-	display:inline;
+	display: inline-block;
+	padding: 0 15px 0 15px
 }
+ .header ul li:hover {
+ 	background-color: #73e4ff;
+ }
+
+ .header ul li a {
+ 	display: inline-block;
+	padding: 0 15px 0 15px;
+	color: white;
+ }
+
+ .selected {
+ 	background-color: #73e4ff;
+ }
+
+ .black {
+ 	color: black!important;
+ }
 
 .header {
 	width: 100%;
 	height: 70px;
-	line-height: 60px;
+	line-height: 70px;
 	background: #00CCFF;
 	-moz-box-shadow: 0 0 10px black;
 	-webkit-box-shadow: 0 0 10px black;
@@ -115,22 +133,22 @@ h1.logo span {
   	transition: top 2s;
 }
 
-.mini-nav a:link {
+a.mini-nav-link:link {
 	text-decoration: none;
 	color: black;
 }
 
-.mini-nav a:visited {
+a.mini-nav-link:visited {
 	text-decoration: none;
 	color: black;
 }
 
-.mini-nav a:hover {
+a.mini-nav-link:hover {
 	text-decoration: none;
 	color: black;
 }
 
-.mini-nav a:active {
+a.mini-nav-link:active {
 	text-decoration: none;
 	color: black;
 }

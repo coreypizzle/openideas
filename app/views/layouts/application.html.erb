@@ -5,20 +5,55 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+	<script src="jquery.localscroll.js" type="text/javascript"></script> 
+	<script src="jquery.scrollTo.js" type="text/javascript"></script>
+	<script src="modal.js" type="text/javascript"></script> 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
 	<div class="header">
+		<%= link_to root_path do %>
 		<h1 class="logo">
 			Open<span>Ideas</span>
 		</h1>
+		<% end %>
 		<ul>
-			<li><%= link_to 'Sign Up', 'users/sign_up'%></li>
+			<% if user_signed_in? %>
+     			Hi, <%= current_user.username %> - 
+    			 <%= link_to 'Log Out', destroy_user_session_path, :method => :delete %>
+			<% else %>
+				<li class="sign-up"><%= link_to 'Sign Up', '/users/sign_up' %></li>
+				<li><%= link_to 'Sign In', '#', :onclick => 'overlay()' %></li>
+			<% end %>
+			
 		</ul>
 	</div>
 
-<%= yield %>
+	<div id="overlay">
+     <div>
+          
+          <%= form_for("user", :url => user_session_path) do |f| %>
+  
+  					<%= f.text_field :username, :autofocus => true, :placeholder => 'Username', :class => "align-c" %>
 
+  					<%= f.password_field :password, :placeholder => 'Password', :class => "align-c" %>
+
+						<%= f.submit "Sign In", :class => 'button' %>	
+
+						<%= link_to 'Cancel', '#', :onclick => 'overlay()', :class => 'button' %>
+
+				<% end %>
+     </div>
+	</div>
+
+
+<%= yield %>
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#nav').localScroll({duration:800});
+});
+</script>
 </body>
 </html>

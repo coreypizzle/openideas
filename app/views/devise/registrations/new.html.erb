@@ -1,22 +1,52 @@
+<style>
+html, body {height: 100%!important;}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.sign-up {
+  background-color: #73e4ff;
+  
+}
+
+</style>
+
 <div class="bg-container">
 
 <div class="user-form">
-<h2>Fill in the details to begin!</h2>
+<h2>Help shape the future!</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => 'user-form-inner') do |f| %>
   <%= devise_error_messages! %>
 
-   <div class="align-c"><%= f.label :username, :class => "align-c" %><br />
-  <%= f.email_field :username, :autofocus => true, :class => "align-c" %></div>
 
-  <div class="align-c"><%= f.label :email, :class => "align-c" %><br />
-  <%= f.email_field :email, :autofocus => true, :class => "align-c" %></div>
+  <div><%= f.text_field :username, :autofocus => true, :class => "align-c", :placeholder => "Username" %></div>
 
-  <div class="align-c"><%= f.label :password, :class => "align-c" %><br />
-  <%= f.password_field :password, :class => "align-c" %></div>
 
-  <div class="align-c"><%= f.label :password_confirmation, :class => "align-c" %><br />
-  <%= f.password_field :password_confirmation, :class => "align-c" %></div>
+  <div><%= f.email_field :email, :autofocus => true, :class => "align-c", :placeholder => "E-Mail" %></div>
+
+
+  <div><%= f.password_field :password, :class => "align-c", :placeholder => "Password" %></div>
+
+
+  <div><%= f.password_field :password_confirmation, :class => "align-c", :placeholder => "Password Confirmation" %></div>
 
   <div class="align-c"><%= f.submit "Sign up", :class => "button align-c" %></div>
  </div>
